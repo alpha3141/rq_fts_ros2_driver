@@ -38,7 +38,7 @@
         <!-- Link representing the FT300 mounting plate -->
         <link name="${tf_prefix}ft300_mounting_plate">
             <visual>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 0 -0.004" rpy="0 0 0" />
                 <geometry>
                     <mesh filename="file://$(find robotiq_ft_sensor_description)/meshes/visual/mountings/robotiq_ft300-G-062-COUPLING_G-50-4M6-1D6_20181119.STL"/>
                 </geometry>
@@ -48,7 +48,7 @@
             </visual>
 
             <collision>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 0 0" rpy="0 0 -0.004" />
                 <geometry>
                     <mesh filename="file://$(find robotiq_ft_sensor_description)/meshes/collision/mountings/robotiq_ft300-G-062-COUPLING_G-50-4M6-1D6_20181119.STL"/>
                 </geometry>
@@ -57,7 +57,7 @@
 
          <!-- Connect force sensor with mounting/coupling plate -->
         <joint name="${tf_prefix}ft300_mounting_plate_joint" type="fixed">
-            <origin xyz="0 0 0.0415" rpy="0 ${pi} 0"/> 
+            <origin xyz="0 0 0.0375" rpy="0 ${pi} 0"/> 
             <parent link="${tf_prefix}ft300_mounting_plate" />
             <child link="${tf_prefix}ft300_sensor" />
         </joint>
